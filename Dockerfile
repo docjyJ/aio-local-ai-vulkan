@@ -2,7 +2,8 @@
 FROM quay.io/go-skynet/local-ai:v3.1.1-vulkan
 
 RUN apt-get update && \
-    apt-get install -y caddy
+    apt-get install -y caddy && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY Caddyfile /Caddyfile
 COPY entrypoint_security.sh /entrypoint_security.sh
