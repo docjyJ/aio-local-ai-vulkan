@@ -29,7 +29,20 @@ For hardware acceleration, you need:
 
 See [how to use community containers](https://github.com/nextcloud/all-in-one/tree/main/community-containers#how-to-use-this).
 
-Then go to the local AI Web UI and download the models you want to use.
+After installation on Nextcloud, go to `https://TODO.$NC_DOMAIN/login` and log in with the following credentials:
+- **Username**: `aio`
+- **Password**: Get password inside the AIO interface
 
-After installation on Nextcloud, go to `https://$NC_DOMAIN/settings/admin/ai` and enable the Local AI server.
-You must also configure the models you want to use there.
+From the web interface of Local AI, you can download and manage models. By default, no models are installed, so you need to download them manually. See [Recommended models](#recommended-models) below.
+
+After downloading the models, you neet to configure the Local AI server in Nextcloud. Go to `https://$NC_DOMAIN/settings/admin/ai` and set the Local AI server URL to `http://localhost:8080`. This is the default URL for the Local AI server in this container.
+
+#### Recommended models
+
+| Usage               | Model            |
+|---------------------|------------------|
+| Text generation     | llama 3          |
+| Image generation    | Stable Diffusion |
+| Audio transcription | Whisper          |
+
+feedback and suggestions are welcome!
