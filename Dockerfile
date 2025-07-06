@@ -1,5 +1,5 @@
 # From https://github.com/go-skynet/LocalAI/blob/master/Dockerfile
-FROM quay.io/go-skynet/local-ai:v3.1.1-gpu-vulkan
+FROM quay.io/go-skynet/local-ai:v3.1.1-vulkan
 
 RUN apt-get update && \
     apt-get install -y caddy
