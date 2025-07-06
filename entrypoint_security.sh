@@ -4,6 +4,8 @@ if [ -z "$LOCAL_AI_PASS" ]; then
   exit 1
 fi
 
-HASHED_PASSWORD=$(caddy hash-password --plaintext "$LOCAL_AI_PASS") caddy run --config /Caddyfile &
+HASHED_PASSWORD=$(caddy hash-password --plaintext "$LOCAL_AI_PASS")
+export HASHED_PASSWORD
+caddy run --config /Caddyfile &
 
 exec entrypoint.sh "$@"
