@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -z "$LOCAL_AI_PASS" ]; then
-  echo "Error : LOCAL_AI_PASS environment variable is not set."
+  echo "Error: LOCAL_AI_PASS environment variable is not set."
   exit 1
 fi
 
