@@ -35,7 +35,7 @@ After installation on Nextcloud, go to `https://TODO.$NC_DOMAIN/login` and log i
 
 From the web interface of Local AI, you can download and manage models. By default, no models are installed, so you need to download them manually. See [Recommended models](#recommended-models) below.
 
-After downloading the models, you neet to configure the Local AI server in Nextcloud. Go to `https://$NC_DOMAIN/settings/admin/ai` and set the Local AI server URL to `http://localhost:8080`. This is the default URL for the Local AI server in this container.
+After downloading the models, you neet to configure the Local AI server in Nextcloud. Go to `https://$NC_DOMAIN/settings/admin/ai` and set the Local AI server URL to `http://localhost:8080`. This is the default URL for the Local AI server in this container. You can configure the models you want to use in the Nextcloud Assistant settings.
 
 #### Recommended models
 
