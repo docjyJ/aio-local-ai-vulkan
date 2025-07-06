@@ -8,4 +8,4 @@ else
   caddy run --config /Caddyfile &
 fi
 
-exec entrypoint.sh "$@"
+bash /entrypoint.sh "$@"
