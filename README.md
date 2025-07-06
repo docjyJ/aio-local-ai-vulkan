@@ -29,25 +29,7 @@ For hardware acceleration, you need:
 
 See [how to use community containers](https://github.com/nextcloud/all-in-one/tree/main/community-containers#how-to-use-this).
 
+Then go to the local AI Web UI and download the models you want to use.
+
 After installation on Nextcloud, go to `https://$NC_DOMAIN/settings/admin/ai` and enable the Local AI server.
 You must also configure the models you want to use there.
-
-### How access Local AI web interface
-
-> [!NOTE]
-> Local AI web interface does not have any authentication, so you should protect it.
-
-To access the Local AI web interface, you must use a reverse proxy. You can use Caddy, Nginx, or any other reverse proxy server.
-
-For example, if you use Caddy, you can add the following configuration to your Caddyfile:
-
-```Caddyfile
-http://local-ai.your-nc-domain.com {
-    # Local AI web interface haven't any authentication, so you should protect it
-    basic_auth {
-        # Username "Bob", password "hiccup"
-        Bob $2a$14$Zkx19XLiW6VYouLHR5NmfOFU0z2GTNmpkT/5qqR7hx4IjWJPDhjvG
-    }
-    reverse_proxy nenxtcloud-aio-local-ai-vulkan:8080
-}
-```

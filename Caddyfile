@@ -1,0 +1,6 @@
+http://:10078 {
+    basic_auth {
+        aio {$HASHED_PASSWORD}
+    }
+    reverse_proxy http://127.0.0.1:8080
+}
