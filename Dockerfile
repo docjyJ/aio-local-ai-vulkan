@@ -8,7 +8,7 @@ RUN curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --de
     rm -rf /var/lib/apt/lists/*
 
 COPY Caddyfile /Caddyfile
-COPY entrypoint_security.sh /entrypoint_security.sh
+COPY --chmod=755 entrypoint_security.sh /entrypoint_security.sh
 
 ENTRYPOINT ["/entrypoint_security.sh"]
 
