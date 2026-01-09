@@ -1,7 +1,3 @@
-> [!WARNING]
-> ARM devices are not supported by this container. It is only for x86_64 devices.
-> See: https://github.com/mudler/LocalAI/issues/5778
-
 # Local AI with Vulkan support Community Container for Nextcloud All-In-One
 
 This container is used in the [Nextcloud All-In-One](https://github.com/nextcloud/all-in-one/tree/main/community-containers/local-ai-vulkan) AI backend for Nextcloud Assistant. It works with the [Caddy community container](https://github.com/nextcloud/all-in-one/tree/main/community-containers/caddy) as a reverse proxy.
