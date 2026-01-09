@@ -2,7 +2,7 @@
 FROM quay.io/go-skynet/local-ai:master-gpu-vulkan
 
 RUN apt-get update && \
-    apt-get install -y caddy=2.6.2 && \
+    apt-get install -y caddy && \
     rm -rf /var/lib/apt/lists/*
 
 COPY Caddyfile /Caddyfile
