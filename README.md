@@ -1,6 +1,6 @@
 # Local AI with Vulkan support Community Container for Nextcloud All-In-One
 
-This container is used in the [Nextcloud All-In-One](https://github.com/nextcloud/all-in-one/tree/main/community-containers/local-ai-vulkan) AI backend for Nextcloud Assistant. It works with the [Caddy community container](https://github.com/nextcloud/all-in-one/tree/main/community-containers/caddy) as a reverse proxy.
+This container is used in the [Nextcloud All-In-One](https://github.com/nextcloud/all-in-one/tree/main/community-containers/local-ai) AI backend for Nextcloud Assistant. It works with the [Caddy community container](https://github.com/nextcloud/all-in-one/tree/main/community-containers/caddy) as a reverse proxy.
 
 ## Features
 
@@ -38,7 +38,7 @@ From the Local AI web interface, you can download and manage models. By default,
 
 After downloading the models, configure the Local AI server in Nextcloud:
 1. Go to `https://$NC_DOMAIN/settings/admin/ai`
-2. Set the Local AI server URL to `http://nextcloud-aio-local-ai-vulkan:10078`
+2. Set the Local AI server URL to `http://nextcloud-aio-local-ai:10078`
 3. Setup API key authentication with the API key from above.
 4. Configure the models you want to use in the Nextcloud Assistant settings.
 
@@ -54,7 +54,7 @@ Feedback and suggestions are welcome!
 
 ## Use Your Own Reverse Proxy
 
-Redirect HTTPS (or HTTP) traffic from `ai.$NC_DOMAIN` (or another subdomain) to port `10078` of the `nextcloud-aio-local-ai-vulkan` container over HTTP.
+Redirect HTTPS (or HTTP) traffic from `ai.$NC_DOMAIN` (or another subdomain) to port `10078` of the `nextcloud-aio-local-ai` container over HTTP.
 
 Example with `Caddyfile` syntax:
 
